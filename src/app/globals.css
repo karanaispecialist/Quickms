@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0A1128;
+  --foreground: #F8FAFC;
+  
+  /* Brand color hex values for non-tailwind custom values if needed */
+  --brand-navy: #0A1128;
+  --brand-navy-dark: #050816;
+  --brand-navy-light: #1C2541;
+  --brand-orange: #FF5A09;
+  --brand-orange-hover: #E04E07;
+  
+  --neutral-light: #F8FAFC;
+  --neutral-muted: #64748B;
+  --neutral-dark: #0F172A;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  /* Brand Palette */
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-navy-dark: var(--brand-navy-dark);
+  --color-brand-navy-light: var(--brand-navy-light);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-orange-hover: var(--brand-orange-hover);
+  --color-neutral-light: var(--neutral-light);
+  --color-neutral-muted: var(--neutral-muted);
+  --color-neutral-dark: var(--neutral-dark);
+}
+
+body {
+  background-color: var(--brand-navy-dark);
+  color: var(--neutral-light);
+  font-family: var(--font-geist-sans), sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--brand-navy-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brand-navy-light);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-orange);
+}
+
+/* Custom selection */
+::selection {
+  background-color: var(--brand-orange);
+  color: #ffffff;
+}
+
+/* Accessible focus ring style */
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy;
+}
+
+/* Custom horizontal marquee keyframes */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
