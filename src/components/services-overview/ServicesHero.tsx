@@ -45,9 +45,9 @@ export default function ServicesHero() {
   };
 
   return (
-    <section className="relative w-full bg-[#050816] text-white pt-36 pb-24 md:pt-48 md:pb-32 overflow-hidden select-none">
+    <section className="relative w-full bg-white text-brand-navy pt-36 pb-24 md:pt-48 md:pb-32 overflow-hidden select-none border-b border-neutral-200">
       {/* Glow highlight */}
-      <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-brand-orange/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-brand-orange/[0.03] blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
@@ -61,7 +61,7 @@ export default function ServicesHero() {
             {/* Eyebrow Index */}
             <motion.div
               variants={fadeUpVariants}
-              className="flex items-center gap-2 font-mono text-[10px] md:text-xs tracking-[0.25em] text-white/50 uppercase font-semibold mb-6"
+              className="flex items-center gap-2 font-mono text-[10px] md:text-xs tracking-[0.25em] text-neutral-dark/50 uppercase font-semibold mb-6"
             >
               <span className="text-brand-orange">[</span>
               <span>SERVICES / 01—06</span>
@@ -81,7 +81,7 @@ export default function ServicesHero() {
             {/* Description Copy */}
             <motion.p
               variants={fadeUpVariants}
-              className="text-sm md:text-base text-neutral-light/70 max-w-xl leading-relaxed mt-8 font-normal"
+              className="text-sm md:text-base text-neutral-dark/70 max-w-xl leading-relaxed mt-8 font-normal"
             >
               From international freight and customs clearance to warehousing, transportation, and
               specialized project cargo, Quickmas connects every stage of the logistics journey
@@ -96,7 +96,7 @@ export default function ServicesHero() {
               <a
                 href="#directory"
                 onClick={handleScrollToDirectory}
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white text-brand-navy-dark text-xs font-bold uppercase tracking-widest rounded-[2px] hover:bg-neutral-light transition-colors duration-300 focus-ring group w-full sm:w-auto"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-brand-navy text-white text-xs font-bold uppercase tracking-widest rounded-[2px] hover:bg-brand-navy-light transition-colors duration-300 focus-ring group w-full sm:w-auto"
               >
                 <span>Explore Capabilities</span>
                 <ArrowDown className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-1" />
@@ -104,7 +104,7 @@ export default function ServicesHero() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-white/10 hover:border-white/30 text-white text-xs font-bold uppercase tracking-widest rounded-[2px] hover:bg-white/5 transition-colors duration-300 focus-ring w-full sm:w-auto"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-neutral-200 hover:border-brand-navy text-brand-navy text-xs font-bold uppercase tracking-widest rounded-[2px] hover:bg-brand-navy/5 transition-colors duration-300 focus-ring w-full sm:w-auto"
               >
                 <span>Get a Quote</span>
                 <ArrowRight className="w-4 h-4" />
@@ -118,13 +118,13 @@ export default function ServicesHero() {
             className="col-span-12 lg:col-span-5 flex flex-col gap-6"
           >
             {/* Index Checklist Block */}
-            <div className="border border-white/5 bg-white/[0.02] backdrop-blur-xs p-6 rounded-[2px] flex flex-col gap-4">
+            <div className="border border-neutral-200 bg-brand-navy/5 p-6 rounded-[2px] flex flex-col gap-4">
               <span className="font-mono text-[9px] text-neutral-muted tracking-[0.2em] uppercase">
                 [ SERVICE CATEGORIES ]
               </span>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[10px] font-mono font-bold text-white/80 tracking-wider">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[10px] font-mono font-bold text-brand-navy/80 tracking-wider">
                 {modesList.map((mode, idx) => (
-                  <div key={idx} className="flex items-center gap-2 border-b border-white/5 pb-2">
+                  <div key={idx} className="flex items-center gap-2 border-b border-neutral-200 pb-2">
                     <span className="text-brand-orange">{"//"}</span>
                     <span>{mode.replace(/^\d+\s*\/\s*/, "")}</span>
                   </div>
@@ -133,14 +133,14 @@ export default function ServicesHero() {
             </div>
 
             {/* Visual Image container */}
-            <div className="relative w-full aspect-[16/9] overflow-hidden rounded-[2px] border border-white/5">
+            <div className="relative w-full aspect-[16/9] overflow-hidden rounded-[2px] border border-neutral-200">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80"
                 alt="Quickmas global multi-modal logistics facility"
-                className="w-full h-full object-cover object-center filter grayscale opacity-80"
+                className="w-full h-full object-cover object-center filter grayscale"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/35 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white/30 to-transparent pointer-events-none" />
             </div>
           </motion.div>
         </motion.div>

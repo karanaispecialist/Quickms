@@ -49,10 +49,10 @@ export default function ServiceDetails({ activeService }: ServiceDetailsProps) {
             <motion.span variants={itemVariants} className="text-xs font-mono font-bold text-brand-orange/80">
               {activeService.number} {"// CAPABILITY"}
             </motion.span>
-            <motion.h3 variants={itemVariants} className="text-2xl md:text-3xl font-black tracking-tight text-white uppercase">
+            <motion.h3 variants={itemVariants} className="text-2xl md:text-3xl font-black tracking-tight text-brand-navy uppercase">
               {activeService.title}
             </motion.h3>
-            <motion.p variants={itemVariants} className="text-sm text-neutral-light/75 leading-relaxed mt-2 max-w-xl">
+            <motion.p variants={itemVariants} className="text-sm text-neutral-dark/85 leading-relaxed mt-2 max-w-xl">
               {activeService.description}
             </motion.p>
           </div>
@@ -67,7 +67,7 @@ export default function ServiceDetails({ activeService }: ServiceDetailsProps) {
                 <motion.div
                   key={i}
                   variants={itemVariants}
-                  className="flex items-center gap-2 py-2 px-3 bg-white/5 border border-white/5 text-[10px] md:text-xs font-semibold font-mono tracking-wider uppercase text-white/80 rounded-[2px]"
+                  className="flex items-center gap-2 py-2 px-3 bg-brand-navy/5 border border-neutral-200 text-[10px] md:text-xs font-semibold font-mono tracking-wider uppercase text-brand-navy/80 rounded-[2px]"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-brand-orange/70" />
                   <span>{cap}</span>

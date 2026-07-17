@@ -57,7 +57,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
   return (
     <section
       aria-label="Air Freight Service Introduction"
-      className="relative w-full min-h-[100svh] flex flex-col justify-end overflow-hidden bg-brand-navy-dark"
+      className="relative w-full min-h-[100svh] flex flex-col justify-end overflow-hidden bg-[#F8FAFC]"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -70,9 +70,9 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
           sizes="100vw"
         />
         {/* Layered gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-[#050816]/70 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#050816]/80 to-transparent" />
-        <div className="absolute inset-0 bg-[#050816]/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#F8FAFC] via-[#F8FAFC]/75 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#F8FAFC]/55 to-transparent" />
+        <div className="absolute inset-0 bg-white/20" />
       </div>
 
       {/* Content */}
@@ -85,7 +85,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
         {/* Service Label */}
         <motion.div
           variants={fadeUpVariants}
-          className="flex items-center gap-2 font-mono text-[10px] md:text-xs tracking-[0.25em] text-white/50 uppercase font-semibold"
+          className="flex items-center gap-2 font-mono text-[10px] md:text-xs tracking-[0.25em] text-neutral-dark/50 uppercase font-semibold"
         >
           <span className="text-brand-orange">[</span>
           <span>{data.label}</span>
@@ -93,7 +93,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
         </motion.div>
 
         {/* Headline */}
-        <h1 className="flex flex-col text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-black tracking-tight leading-[0.95] text-white select-none">
+        <h1 className="flex flex-col text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-black tracking-tight leading-[0.95] text-brand-navy select-none">
           {data.headline.map((line, idx) => (
             <span key={idx} className="relative block overflow-hidden py-1">
               <motion.span
@@ -113,7 +113,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
         {/* Supporting Copy */}
         <motion.p
           variants={fadeUpVariants}
-          className="text-sm md:text-base text-neutral-light/70 max-w-xl leading-relaxed font-normal"
+          className="text-sm md:text-base text-neutral-dark/80 max-w-xl leading-relaxed font-normal"
         >
           {data.description}
         </motion.p>
@@ -134,7 +134,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
           <a
             href="#capabilities"
             onClick={handleScrollToCapabilities}
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-white/10 hover:border-white/30 text-white text-xs font-bold uppercase tracking-widest rounded-[2px] hover:bg-white/5 transition-colors duration-300 focus-ring group w-full sm:w-auto"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-neutral-200 hover:border-brand-navy text-brand-navy text-xs font-bold uppercase tracking-widest rounded-[2px] hover:bg-brand-navy/5 transition-colors duration-300 focus-ring group w-full sm:w-auto"
           >
             <span>Explore Services</span>
             <ArrowDown className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-1" />
@@ -149,7 +149,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
           {data.tags.map((tag, idx) => (
             <span
               key={idx}
-              className="font-mono text-[9px] tracking-[0.2em] text-white/30 uppercase font-bold flex items-center gap-3"
+              className="font-mono text-[9px] tracking-[0.2em] text-neutral-dark/40 uppercase font-bold flex items-center gap-3"
             >
               {idx > 0 && (
                 <span className="text-brand-orange/40">·</span>
@@ -161,7 +161,7 @@ export default function ServiceHero({ data }: ServiceHeroProps) {
       </motion.div>
 
       {/* Bottom edge fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-white/5 z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-neutral-200 z-10" />
     </section>
   );
 }

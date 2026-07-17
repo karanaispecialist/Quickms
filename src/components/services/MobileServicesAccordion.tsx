@@ -20,12 +20,12 @@ export default function MobileServicesAccordion({
   };
 
   return (
-    <div className="flex flex-col w-full border-t border-white/10" role="tablist" aria-label="Services Mobile Accordion">
+    <div className="flex flex-col w-full border-t border-neutral-200" role="tablist" aria-label="Services Mobile Accordion">
       {services.map((service, index) => {
         const isOpen = index === openIndex;
 
         return (
-          <div key={service.id} className="border-b border-white/10 flex flex-col">
+          <div key={service.id} className="border-b border-neutral-200 flex flex-col">
             {/* Header Trigger */}
             <button
               onClick={() => toggleAccordion(index)}
@@ -44,7 +44,7 @@ export default function MobileServicesAccordion({
                 </span>
                 <span
                   className={`text-base font-bold tracking-tight uppercase transition-colors duration-300
-                    ${isOpen ? "text-white" : "text-white/60"}
+                    ${isOpen ? "text-brand-navy" : "text-neutral-dark/60"}
                   `}
                 >
                   {service.title}
@@ -71,18 +71,18 @@ export default function MobileServicesAccordion({
                 >
                   <div className="pb-8 flex flex-col gap-6">
                     {/* Visual Image */}
-                    <div className="relative w-full aspect-[16/10] overflow-hidden rounded-[2px] border border-white/5 shadow-md">
+                    <div className="relative w-full aspect-[16/10] overflow-hidden rounded-[2px] border border-neutral-200 shadow-md">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={service.image}
                         alt={`Quickmas ${service.title}`}
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-brand-navy-dark/60 to-transparent pointer-events-none" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent pointer-events-none" />
                     </div>
 
                     {/* Description Paragraph */}
-                    <p className="text-sm text-neutral-light/80 leading-relaxed">
+                    <p className="text-sm text-neutral-dark/80 leading-relaxed">
                       {service.description}
                     </p>
 
@@ -95,7 +95,7 @@ export default function MobileServicesAccordion({
                         {service.capabilities.map((cap, i) => (
                           <div
                             key={i}
-                            className="flex items-center gap-2 py-1.5 px-2 bg-white/5 border border-white/5 text-[9px] font-mono font-semibold tracking-wider uppercase text-white/80 rounded-[2px]"
+                            className="flex items-center gap-2 py-1.5 px-2 bg-brand-navy/5 border border-neutral-200 text-[9px] font-mono font-semibold tracking-wider uppercase text-brand-navy/80 rounded-[2px]"
                           >
                             <span className="w-1 h-1 rounded-full bg-brand-orange" />
                             <span className="truncate">{cap}</span>

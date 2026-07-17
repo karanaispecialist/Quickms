@@ -13,7 +13,7 @@ import Footer from "@/components/footer/Footer";
 
 export default function HomeClient() {
   return (
-    <div className="relative min-h-screen flex flex-col bg-brand-navy-dark text-white selection:bg-brand-orange selection:text-white">
+    <div className="relative min-h-screen flex flex-col bg-[#F8FAFC] text-neutral-dark selection:bg-brand-orange selection:text-white">
       {/* Global Navigation Bar */}
       <Navbar light={true} />
 

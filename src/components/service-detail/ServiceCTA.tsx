@@ -22,10 +22,10 @@ export default function ServiceCTA({ data }: ServiceCTAProps) {
   return (
     <section
       aria-label="Request Air Freight Quote"
-      className="relative w-full bg-brand-navy-dark text-white py-24 md:py-32 overflow-hidden border-t border-white/5"
+      className="relative w-full bg-white text-brand-navy py-24 md:py-32 overflow-hidden border-t border-neutral-200"
     >
       {/* Subtle glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-brand-orange/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-brand-orange/[0.03] blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-12 gap-y-10 lg:gap-16 items-start">
@@ -68,7 +68,7 @@ export default function ServiceCTA({ data }: ServiceCTAProps) {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={revealVariants}
-              className="text-sm md:text-base text-neutral-light/70 leading-relaxed font-medium"
+              className="text-sm md:text-base text-neutral-dark/70 leading-relaxed font-medium"
             >
               {data.description}
             </motion.p>
@@ -92,7 +92,7 @@ export default function ServiceCTA({ data }: ServiceCTAProps) {
               {/* Secondary CTA */}
               <Link
                 href={data.secondaryHref}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/10 hover:border-white/30 text-white text-xs font-bold uppercase tracking-widest rounded-[2px] hover:bg-white/5 transition-colors duration-300 focus-ring"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-neutral-200 hover:border-brand-navy text-brand-navy text-xs font-bold uppercase tracking-widest rounded-[2px] hover:bg-brand-navy/5 transition-colors duration-300 focus-ring"
               >
                 <span>{data.secondaryCta}</span>
                 <ArrowUpRight className="w-4 h-4" />

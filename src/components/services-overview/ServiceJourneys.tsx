@@ -46,7 +46,7 @@ export default function ServiceJourneys() {
   ];
 
   return (
-    <section className="relative w-full bg-[#050816] text-white py-24 md:py-32 overflow-hidden border-t border-white/5 select-none">
+    <section className="relative w-full bg-white text-brand-navy py-24 md:py-32 overflow-hidden border-t border-neutral-200 select-none">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-16">
         
         {/* Header Intro */}
@@ -75,7 +75,7 @@ export default function ServiceJourneys() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={revealVariants}
-            className="col-span-12 lg:col-span-6 text-sm md:text-base text-neutral-light/70 leading-relaxed lg:pt-12 font-medium"
+            className="col-span-12 lg:col-span-6 text-sm md:text-base text-neutral-dark/70 leading-relaxed lg:pt-12 font-medium"
           >
             <p>
               By combining logistics operations, Quickmas orchestrates time-sensitive import and
@@ -94,11 +94,11 @@ export default function ServiceJourneys() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="flex flex-col justify-between p-6 bg-white/[0.02] border border-white/5 rounded-[2px] shadow-[0_5px_15px_rgba(0,0,0,0.1)]"
+              className="flex flex-col justify-between p-6 bg-[#F8FAFC] border border-neutral-200 rounded-[2px] shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               <div>
                 {/* Journey Title */}
-                <h3 className="font-mono text-xs font-bold text-brand-orange tracking-wider uppercase mb-6 border-b border-white/5 pb-3">
+                <h3 className="font-mono text-xs font-bold text-brand-orange tracking-wider uppercase mb-6 border-b border-neutral-200 pb-3">
                   {journey.title}
                 </h3>
 
@@ -110,14 +110,15 @@ export default function ServiceJourneys() {
                       <div key={stepIdx} className="flex flex-col gap-2">
                         <div className="flex items-center gap-3">
                           {/* Circle Icon */}
-                          <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/80">
+                          <div className="w-8 h-8 rounded-full bg-brand-navy/5 border border-neutral-200 flex items-center justify-center text-brand-navy/80">
                             <IconComp className="w-4 h-4" />
                           </div>
                           {/* Step label */}
-                          <span className="text-xs font-mono font-bold tracking-wide text-white/90">
+                          <span className="text-xs font-mono font-bold tracking-wide text-brand-navy/90">
                             {step.label.toUpperCase()}
                           </span>
                         </div>
+
                         {/* Connecting Arrow */}
                         {stepIdx < journey.steps.length - 1 && (
                           <div className="pl-3.5 text-neutral-muted">
@@ -131,7 +132,7 @@ export default function ServiceJourneys() {
               </div>
 
               {/* Journey description */}
-              <p className="text-[11px] md:text-xs text-neutral-light/60 mt-8 border-t border-white/5 pt-4 leading-relaxed font-mono font-medium">
+              <p className="text-[11px] md:text-xs text-neutral-dark/70 mt-8 border-t border-neutral-200 pt-4 leading-relaxed font-mono font-medium">
                 {journey.description}
               </p>
             </motion.div>

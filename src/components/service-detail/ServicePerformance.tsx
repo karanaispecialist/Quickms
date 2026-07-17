@@ -62,7 +62,7 @@ export default function ServicePerformance({ data }: ServicePerformanceProps) {
   return (
     <section
       aria-label="Operational Performance"
-      className="relative w-full bg-brand-navy-dark text-white py-24 md:py-36 overflow-hidden border-t border-white/5"
+      className="relative w-full bg-white text-brand-navy py-24 md:py-36 overflow-hidden border-t border-neutral-200"
     >
       {/* Subtle centered glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-orange/[0.04] blur-[150px] rounded-full pointer-events-none" />
@@ -92,7 +92,7 @@ export default function ServicePerformance({ data }: ServicePerformanceProps) {
             <span className="text-7xl sm:text-8xl md:text-9xl lg:text-[12rem] font-black tracking-tighter leading-none text-brand-orange">
               <AnimatedNumber value={data.total} />
             </span>
-            <span className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white/30 uppercase">
+            <span className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-brand-navy/30 uppercase">
               {data.unit}
             </span>
           </div>
@@ -114,9 +114,9 @@ export default function ServicePerformance({ data }: ServicePerformanceProps) {
             {data.breakdown.map((item, idx) => (
               <div
                 key={idx}
-                className="flex flex-col items-center text-center border border-white/[0.06] rounded-[2px] py-10 md:py-14 bg-white/[0.01] select-none"
+                className="flex flex-col items-center text-center border border-neutral-200 rounded-[2px] py-10 md:py-14 bg-brand-navy/5 select-none"
               >
-                <span className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter leading-none text-white">
+                <span className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter leading-none text-brand-navy">
                   <AnimatedNumber value={item.value} />
                 </span>
                 <span className="font-mono text-[10px] tracking-[0.25em] text-brand-orange/70 uppercase font-bold mt-3">

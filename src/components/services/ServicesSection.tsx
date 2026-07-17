@@ -25,7 +25,7 @@ export default function ServicesSection() {
   return (
     <section
       aria-label="Capabilities"
-      className="relative w-full bg-[#050816] text-white py-24 md:py-32 overflow-hidden border-t border-white/5"
+      className="relative w-full bg-white text-brand-navy py-24 md:py-32 overflow-hidden border-t border-neutral-200"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-12 md:gap-16">
         
@@ -61,7 +61,7 @@ export default function ServicesSection() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={revealVariants}
-            className="col-span-12 lg:col-span-6 text-sm md:text-base text-neutral-light/70 leading-relaxed lg:pt-2"
+            className="col-span-12 lg:col-span-6 text-sm md:text-base text-neutral-dark/70 leading-relaxed lg:pt-2"
           >
             <p>{servicesIntro.description}</p>
           </motion.div>

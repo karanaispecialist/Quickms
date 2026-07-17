@@ -37,7 +37,7 @@ export default function PerformanceItem({ item }: PerformanceItemProps) {
               <span>Export: 120+ MT (29%)</span>
             </div>
             {/* Proportional rail */}
-            <div className="w-full h-2 bg-white/5 rounded-[1px] overflow-hidden flex border border-white/5">
+            <div className="w-full h-2 bg-brand-navy/5 rounded-[1px] overflow-hidden flex border border-neutral-200">
               <motion.div
                 initial={{ width: 0 }}
                 whileInView={{ width: "71.4%" }}
@@ -50,7 +50,7 @@ export default function PerformanceItem({ item }: PerformanceItemProps) {
                 whileInView={{ width: "28.6%" }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-                className="h-full bg-white/20"
+                className="h-full bg-brand-navy/15"
               />
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function PerformanceItem({ item }: PerformanceItemProps) {
                 />
               ))}
               {/* Divider */}
-              <div className="w-[1px] h-full bg-white/10 mx-1" />
+              <div className="w-[1px] h-full bg-brand-navy/15 mx-1" />
               {/* Exports: 2 blocks */}
               {[...Array(2)].map((_, i) => (
                 <motion.div
@@ -86,7 +86,7 @@ export default function PerformanceItem({ item }: PerformanceItemProps) {
                   whileInView={{ scaleY: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: (i + 4) * 0.1 }}
-                  className="w-10 h-full bg-white/20 border border-white/5 rounded-[1px] origin-bottom"
+                  className="w-10 h-full bg-brand-navy/15 border border-neutral-200/60 rounded-[1px] origin-bottom"
                 />
               ))}
             </div>
@@ -96,17 +96,17 @@ export default function PerformanceItem({ item }: PerformanceItemProps) {
       case "03": // Customs Brokerage: Job clearance indicators
         return (
           <div className="w-full mt-4 grid grid-cols-3 gap-2 font-mono text-[8px] tracking-wider select-none">
-            <div className="border border-white/5 bg-white/5 py-2 px-2 flex flex-col gap-1 rounded-[1px]">
+            <div className="border border-neutral-200 bg-brand-navy/5 py-2 px-2 flex flex-col gap-1 rounded-[1px]">
               <span className="text-brand-orange">STEP 01</span>
-              <span className="text-white/60 font-bold uppercase truncate">ENTRY LODGED</span>
+              <span className="text-neutral-dark/80 font-bold uppercase truncate">ENTRY LODGED</span>
             </div>
-            <div className="border border-white/5 bg-white/5 py-2 px-2 flex flex-col gap-1 rounded-[1px]">
+            <div className="border border-neutral-200 bg-brand-navy/5 py-2 px-2 flex flex-col gap-1 rounded-[1px]">
               <span className="text-brand-orange">STEP 02</span>
-              <span className="text-white/60 font-bold uppercase truncate">DUTY SECURED</span>
+              <span className="text-neutral-dark/80 font-bold uppercase truncate">DUTY SECURED</span>
             </div>
-            <div className="border border-white/5 bg-white/5 py-2 px-2 flex flex-col gap-1 rounded-[1px]">
+            <div className="border border-neutral-200 bg-brand-navy/5 py-2 px-2 flex flex-col gap-1 rounded-[1px]">
               <span className="text-brand-orange">STEP 03</span>
-              <span className="text-white/60 font-bold uppercase truncate">OUT OF CHARGE</span>
+              <span className="text-neutral-dark/80 font-bold uppercase truncate">OUT OF CHARGE</span>
             </div>
           </div>
         );
@@ -119,7 +119,7 @@ export default function PerformanceItem({ item }: PerformanceItemProps) {
               <span>Distribution Hub: City center</span>
             </div>
             {/* Linear track visual */}
-            <div className="relative w-full h-1 bg-white/5 rounded-full flex items-center">
+            <div className="relative w-full h-1 bg-brand-navy/15 rounded-full flex items-center">
               <motion.div
                 initial={{ left: 0 }}
                 whileInView={{ left: "100%" }}
@@ -127,8 +127,8 @@ export default function PerformanceItem({ item }: PerformanceItemProps) {
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute w-2 h-2 rounded-full bg-brand-orange -translate-y-[2px]"
               />
-              <div className="absolute left-[30%] w-1.5 h-1.5 rounded-full bg-white/40" />
-              <div className="absolute left-[70%] w-1.5 h-1.5 rounded-full bg-white/40" />
+              <div className="absolute left-[30%] w-1.5 h-1.5 rounded-full bg-brand-navy/40" />
+              <div className="absolute left-[70%] w-1.5 h-1.5 rounded-full bg-brand-navy/40" />
             </div>
           </div>
         );
@@ -143,7 +143,7 @@ export default function PerformanceItem({ item }: PerformanceItemProps) {
                 whileInView={{ opacity: [0.1, 0.4, 0.2] }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.15 }}
-                className="h-4 border border-white/5 bg-white/5 rounded-[1px] flex items-center justify-center font-mono text-[8px] text-white/40"
+                className="h-4 border border-neutral-200 bg-brand-navy/5 rounded-[1px] flex items-center justify-center font-mono text-[8px] text-brand-navy/60"
               >
                 {`SLOT-${i}`}
               </motion.div>
@@ -162,7 +162,7 @@ export default function PerformanceItem({ item }: PerformanceItemProps) {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
-      className="w-full py-8 md:py-10 border-b border-white/10 flex flex-col sm:flex-row justify-between items-start gap-6 sm:gap-8"
+      className="w-full py-8 md:py-10 border-b border-neutral-200 flex flex-col sm:flex-row justify-between items-start gap-6 sm:gap-8"
     >
       {/* Category Info */}
       <div className="flex flex-col gap-1 w-full sm:w-1/2">
@@ -170,11 +170,11 @@ export default function PerformanceItem({ item }: PerformanceItemProps) {
           <span className="font-mono text-xs font-bold text-brand-orange/80">
             {item.number}
           </span>
-          <h3 className="text-base md:text-lg font-bold tracking-tight uppercase text-white">
+          <h3 className="text-base md:text-lg font-bold tracking-tight uppercase text-brand-navy">
             {item.category}
           </h3>
         </div>
-        <p className="text-xs text-neutral-light/60 leading-relaxed mt-2 max-w-sm">
+        <p className="text-xs text-neutral-dark/70 leading-relaxed mt-2 max-w-sm">
           {item.description}
         </p>
 
@@ -188,7 +188,7 @@ export default function PerformanceItem({ item }: PerformanceItemProps) {
         <div className="overflow-hidden relative h-16 sm:h-20 w-full flex sm:justify-end items-center">
           <motion.span
             variants={numberVariants}
-            className="text-5xl md:text-7xl font-black font-mono tracking-tight text-white inline-block leading-none"
+            className="text-5xl md:text-7xl font-black font-mono tracking-tight text-brand-navy inline-block leading-none"
           >
             {item.value}
           </motion.span>

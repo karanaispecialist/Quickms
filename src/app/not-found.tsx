@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <div className="relative min-h-screen bg-brand-navy-dark text-white selection:bg-brand-orange selection:text-white flex flex-col justify-between">
+    <div className="relative min-h-screen bg-[#F8FAFC] text-neutral-dark selection:bg-brand-orange selection:text-white flex flex-col justify-between">
       {/* Global Navigation */}
-      <Navbar />
+      <Navbar light={true} />
 
       <main className="flex-grow flex flex-col items-center justify-center py-32 px-6 md:px-12 relative overflow-hidden">
         {/* Abstract background blur */}
@@ -29,13 +29,13 @@ export default function NotFound() {
           </span>
 
           {/* Heading */}
-          <h1 className="text-6xl md:text-7xl font-black tracking-tight leading-none text-white select-none">
+          <h1 className="text-6xl md:text-7xl font-black tracking-tight leading-none text-brand-navy select-none">
             PAGE <br />
             <span className="text-brand-orange">NOT FOUND.</span>
           </h1>
 
           {/* Copy */}
-          <p className="text-sm text-neutral-light/50 leading-relaxed font-medium mt-2">
+          <p className="text-sm text-neutral-dark/70 leading-relaxed font-medium mt-2">
             The path you are trying to access does not exist or has been moved. Check the URL or return to home to navigate.
           </p>
 

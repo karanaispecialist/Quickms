@@ -14,7 +14,7 @@ export default function ServiceIndex({
   onSelect,
 }: ServiceIndexProps) {
   return (
-    <div className="flex flex-col w-full border-t border-white/10" role="tablist" aria-label="Services List">
+    <div className="flex flex-col w-full border-t border-neutral-200" role="tablist" aria-label="Services List">
       {services.map((service, index) => {
         const isActive = index === activeIndex;
 
@@ -29,8 +29,8 @@ export default function ServiceIndex({
             onMouseEnter={() => onSelect(index)}
             onFocus={() => onSelect(index)}
             onClick={() => onSelect(index)}
-            className={`w-full flex items-center justify-between py-6 md:py-8 border-b border-white/10 text-left transition-all duration-300 focus-ring outline-none group select-none
-              ${isActive ? "text-white" : "text-white/40 hover:text-white/80"}
+            className={`w-full flex items-center justify-between py-6 md:py-8 border-b border-neutral-200 text-left transition-all duration-300 focus-ring outline-none group select-none
+              ${isActive ? "text-brand-navy" : "text-neutral-dark/40 hover:text-neutral-dark/80"}
             `}
           >
             <div className="flex items-center gap-6 md:gap-8">
@@ -46,7 +46,7 @@ export default function ServiceIndex({
               {/* Service Title */}
               <span
                 className={`text-lg md:text-xl font-bold tracking-tight uppercase transition-transform duration-300
-                  ${isActive ? "translate-x-2 text-white" : "translate-x-0"}
+                  ${isActive ? "translate-x-2 text-brand-navy" : "translate-x-0"}
                 `}
               >
                 {service.title}
@@ -56,7 +56,7 @@ export default function ServiceIndex({
             {/* Directional Indicator */}
             <span
               className={`text-sm font-mono font-bold transition-all duration-300
-                ${isActive ? "text-brand-orange rotate-45 scale-110" : "text-neutral-muted group-hover:text-white/80"}
+                ${isActive ? "text-brand-orange rotate-45 scale-110" : "text-neutral-muted group-hover:text-neutral-dark/80"}
               `}
             >
               ↗

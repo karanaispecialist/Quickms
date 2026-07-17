@@ -28,7 +28,7 @@ export default function ServiceWhyChoose({ data }: ServiceWhyChooseProps) {
   return (
     <section
       aria-label="Why Choose Air Freight"
-      className="relative w-full bg-brand-navy-dark text-white py-24 md:py-32 overflow-hidden border-t border-white/5"
+      className="relative w-full bg-white text-brand-navy py-24 md:py-32 overflow-hidden border-t border-neutral-200"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
@@ -62,26 +62,26 @@ export default function ServiceWhyChoose({ data }: ServiceWhyChooseProps) {
             <motion.div
               key={idx}
               variants={revealVariants}
-              className="group border-t border-white/[0.06] last:border-b last:border-white/[0.06]"
+              className="group border-t border-neutral-200 last:border-b last:border-neutral-200"
             >
               <div className="grid grid-cols-12 gap-4 md:gap-8 items-baseline py-10 md:py-16">
                 {/* Large Number */}
                 <div className="col-span-3 sm:col-span-2 md:col-span-2">
-                  <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white/[0.06] group-hover:text-brand-orange/20 transition-colors duration-700 leading-none select-none tracking-tighter">
+                  <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-brand-navy/[0.06] group-hover:text-brand-orange/20 transition-colors duration-700 leading-none select-none tracking-tighter">
                     {item.number}
                   </span>
                 </div>
 
                 {/* Title */}
                 <div className="col-span-9 sm:col-span-10 md:col-span-4 flex items-center">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-black tracking-tight leading-tight uppercase text-white group-hover:text-brand-orange transition-colors duration-500 select-none">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-black tracking-tight leading-tight uppercase text-brand-navy group-hover:text-brand-orange transition-colors duration-500 select-none">
                     {item.title}
                   </h3>
                 </div>
 
                 {/* Description */}
                 <div className="col-span-12 md:col-span-6 md:col-start-7">
-                  <p className="text-sm text-neutral-light/60 leading-relaxed font-medium pl-0 md:pl-4">
+                  <p className="text-sm text-neutral-dark/70 leading-relaxed font-medium pl-0 md:pl-4">
                     {item.description}
                   </p>
                 </div>

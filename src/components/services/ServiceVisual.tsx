@@ -9,7 +9,7 @@ interface ServiceVisualProps {
 
 export default function ServiceVisual({ activeService }: ServiceVisualProps) {
   return (
-    <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-[16/10] overflow-hidden rounded-[3px] border border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.3)] bg-brand-navy select-none">
+    <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-[16/10] overflow-hidden rounded-[3px] border border-neutral-200 shadow-md bg-white select-none">
       
       {/* Dynamic clip-path wipe animation container */}
       <AnimatePresence mode="popLayout">
@@ -30,18 +30,18 @@ export default function ServiceVisual({ activeService }: ServiceVisualProps) {
         </motion.div>
       </AnimatePresence>
 
-      {/* Subtle overlay gradient to match the dark navy theme */}
-      <div className="absolute inset-0 bg-gradient-to-t from-brand-navy-dark/70 via-transparent to-brand-navy-dark/20 pointer-events-none" />
+      {/* Subtle overlay gradient to match the light theme */}
+      <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-white/10 pointer-events-none" />
 
       {/* Minimal movement grid path details - Technical route accent overlay */}
-      <div className="absolute bottom-4 left-4 right-4 z-20 pointer-events-none flex items-center justify-between font-mono text-[9px] tracking-widest text-white/50 bg-brand-navy-dark/65 backdrop-blur-sm border border-white/5 py-2 px-3 rounded-[2px]">
+      <div className="absolute bottom-4 left-4 right-4 z-20 pointer-events-none flex items-center justify-between font-mono text-[9px] tracking-widest text-brand-navy-light/70 bg-white/90 backdrop-blur-xs border border-neutral-200 py-2 px-3 rounded-[2px]">
         <div className="flex items-center gap-1.5">
           <span className="text-brand-orange font-bold">ORG</span>
           <span className="opacity-40">●</span>
         </div>
         
         {/* Subtle sliding route dot overlay */}
-        <div className="flex-1 mx-4 h-[1px] bg-white/10 relative">
+        <div className="flex-1 mx-4 h-[1px] bg-brand-navy/15 relative">
           <motion.div
             key={activeService.id}
             initial={{ left: "0%" }}

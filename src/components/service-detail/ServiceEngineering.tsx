@@ -28,7 +28,7 @@ export default function ServiceEngineering({ data }: ServiceEngineeringProps) {
   return (
     <section
       aria-label="Engineering and Route Planning"
-      className="relative w-full bg-brand-navy-dark text-white py-24 md:py-36 overflow-hidden border-t border-white/5"
+      className="relative w-full bg-white text-brand-navy py-24 md:py-36 overflow-hidden border-t border-neutral-200"
     >
       {/* Glow accent */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand-orange/[0.03] blur-[150px] rounded-full pointer-events-none" />
@@ -63,7 +63,7 @@ export default function ServiceEngineering({ data }: ServiceEngineeringProps) {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={revealVariants}
-              className="text-sm text-neutral-light/60 leading-relaxed max-w-sm"
+              className="text-sm text-neutral-dark/70 leading-relaxed max-w-sm"
             >
               {data.description}
             </motion.p>
@@ -75,13 +75,13 @@ export default function ServiceEngineering({ data }: ServiceEngineeringProps) {
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
             variants={staggerContainer}
-            className="col-span-12 lg:col-span-8 flex flex-col border-t border-white/[0.06]"
+            className="col-span-12 lg:col-span-8 flex flex-col border-t border-neutral-200"
           >
             {data.items.map((item, idx) => (
               <motion.div
                 key={idx}
                 variants={revealVariants}
-                className="group border-b border-white/[0.06] py-10 md:py-12"
+                className="group border-b border-neutral-200 py-10 md:py-12"
               >
                 <div className="grid grid-cols-12 gap-4 items-start">
                   {/* Item Number */}
@@ -93,14 +93,14 @@ export default function ServiceEngineering({ data }: ServiceEngineeringProps) {
 
                   {/* Title */}
                   <div className="col-span-10 md:col-span-4">
-                    <h3 className="text-lg md:text-xl font-black tracking-tight uppercase text-white group-hover:text-brand-orange transition-colors duration-400 select-none leading-none">
+                    <h3 className="text-lg md:text-xl font-black tracking-tight uppercase text-brand-navy group-hover:text-brand-orange transition-colors duration-400 select-none leading-none">
                       {item.title}
                     </h3>
                   </div>
 
                   {/* Description */}
                   <div className="col-span-12 md:col-span-7 md:col-start-6">
-                    <p className="text-sm text-neutral-light/55 leading-relaxed font-medium">
+                    <p className="text-sm text-neutral-dark/70 leading-relaxed font-medium">
                       {item.description}
                     </p>
                   </div>

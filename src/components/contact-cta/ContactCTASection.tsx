@@ -31,10 +31,10 @@ export default function ContactCTASection() {
   return (
     <section
       aria-label="Contact and Conversion"
-      className="relative w-full bg-brand-navy-dark text-white py-24 md:py-32 overflow-hidden border-t border-white/5"
+      className="relative w-full bg-white text-brand-navy py-24 md:py-32 overflow-hidden border-t border-neutral-200"
     >
       {/* Subtle abstract background lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-orange/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-orange/[0.03] blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-12 md:gap-16">
         
@@ -95,7 +95,7 @@ export default function ContactCTASection() {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={revealVariants}
-              className="text-sm md:text-base text-neutral-light/75 leading-relaxed"
+              className="text-sm md:text-base text-neutral-dark/75 leading-relaxed"
             >
               From international freight and customs clearance to warehousing, domestic
               transportation, and complex project cargo, tell us what needs to move and our
@@ -136,7 +136,7 @@ export default function ContactCTASection() {
               {/* Secondary: Talk to our team */}
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/10 hover:border-white/30 text-white text-xs font-bold uppercase tracking-widest rounded-[2px] hover:bg-white/5 transition-colors duration-300 focus-ring"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-neutral-200 hover:border-brand-navy text-brand-navy text-xs font-bold uppercase tracking-widest rounded-[2px] hover:bg-brand-navy/5 transition-colors duration-300 focus-ring"
               >
                 <span>Talk to our Team</span>
               </Link>
@@ -146,7 +146,7 @@ export default function ContactCTASection() {
         </div>
 
         {/* 3. Bottom Capability Ticker (Horizontal visual divider) */}
-        <div className="w-full pt-12 md:pt-16 border-t border-white/5 mt-8 select-none relative overflow-hidden">
+        <div className="w-full pt-12 md:pt-16 border-t border-neutral-200 mt-8 select-none relative overflow-hidden">
           <div className="flex whitespace-nowrap gap-8 text-[9px] font-mono tracking-[0.25em] text-neutral-muted/50 uppercase">
             {/* Duplicated loops for slow marquee effect */}
             <div className="flex gap-8 shrink-0 animate-[marquee_35s_linear_infinite] hover:[animation-play-state:paused]">

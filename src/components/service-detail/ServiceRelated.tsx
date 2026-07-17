@@ -30,7 +30,7 @@ export default function ServiceRelated({ data }: ServiceRelatedProps) {
   return (
     <section
       aria-label="Related Logistics Services"
-      className="relative w-full bg-[#050816] text-white py-24 md:py-32 overflow-hidden border-t border-white/5"
+      className="relative w-full bg-white text-brand-navy py-24 md:py-32 overflow-hidden border-t border-neutral-200"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-12 gap-y-10 lg:gap-16 items-start">
@@ -63,7 +63,7 @@ export default function ServiceRelated({ data }: ServiceRelatedProps) {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={revealVariants}
-              className="text-sm text-neutral-light/55 leading-relaxed max-w-sm"
+              className="text-sm text-neutral-dark/70 leading-relaxed max-w-sm"
             >
               Air freight works alongside other logistics capabilities to
               support complete supply chain requirements.
@@ -76,25 +76,25 @@ export default function ServiceRelated({ data }: ServiceRelatedProps) {
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
             variants={staggerContainer}
-            className="col-span-12 lg:col-span-8 flex flex-col border-t border-white/[0.06]"
+            className="col-span-12 lg:col-span-8 flex flex-col border-t border-neutral-200"
             aria-label="Related service navigation"
           >
             {data.map((item, idx) => (
               <motion.div key={idx} variants={revealVariants}>
                 <Link
                   href={item.href}
-                  className="group flex items-center justify-between py-6 md:py-8 border-b border-white/[0.06] transition-colors duration-300 hover:bg-white/[0.01] px-2 md:px-4 -mx-2 md:-mx-4 rounded-[2px] focus-ring"
+                  className="group flex items-center justify-between py-6 md:py-8 border-b border-neutral-200 transition-colors duration-300 hover:bg-brand-navy/5 px-2 md:px-4 -mx-2 md:-mx-4 rounded-[2px] focus-ring"
                 >
                   <div className="flex items-center gap-4 md:gap-6">
                     <span className="font-mono text-[10px] text-brand-orange/50 tracking-widest font-bold">
                       {String(idx + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="text-lg md:text-xl font-black tracking-tight uppercase text-white group-hover:text-brand-orange transition-colors duration-400 select-none">
+                    <h3 className="text-lg md:text-xl font-black tracking-tight uppercase text-brand-navy group-hover:text-brand-orange transition-colors duration-400 select-none">
                       {item.title}
                     </h3>
                   </div>
 
-                  <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 text-white/20 group-hover:text-brand-orange group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shrink-0" />
+                  <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 text-brand-navy/20 group-hover:text-brand-orange group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shrink-0" />
                 </Link>
               </motion.div>
             ))}

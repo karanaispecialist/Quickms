@@ -25,9 +25,9 @@ export default function ServicesPage() {
   return (
     <>
       <BreadcrumbJsonLd items={breadcrumbs} />
-      <div className="relative min-h-screen flex flex-col bg-brand-navy-dark text-white selection:bg-brand-orange selection:text-white">
+      <div className="relative min-h-screen flex flex-col bg-[#F8FAFC] text-neutral-dark selection:bg-brand-orange selection:text-white">
       {/* 1. Global Navigation Bar */}
-      <Navbar />
+      <Navbar light={true} />
 
       {/* Primary Inner Landing Content */}
       <main className="flex-grow">

@@ -15,8 +15,8 @@ export default function ServicesCTA() {
   };
 
   return (
-    <section className="relative w-full bg-brand-navy-dark text-white py-24 md:py-32 overflow-hidden border-t border-white/5 select-none">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand-orange/5 blur-[100px] rounded-full pointer-events-none" />
+    <section className="relative w-full bg-white text-brand-navy py-24 md:py-32 overflow-hidden border-t border-neutral-200 select-none">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand-orange/[0.03] blur-[100px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-12 gap-y-10 lg:gap-16 items-start">
@@ -47,7 +47,7 @@ export default function ServicesCTA() {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={revealVariants}
-              className="text-sm md:text-base text-neutral-light/70 leading-relaxed font-medium"
+              className="text-sm md:text-base text-neutral-dark/70 leading-relaxed font-medium"
             >
               Tell us what needs to move, where it needs to go, and the complexity involved.
               Our logistics team will help identify the right combination of services.
@@ -70,7 +70,7 @@ export default function ServicesCTA() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/10 hover:border-white/30 text-white text-xs font-bold uppercase tracking-widest rounded-[2px] hover:bg-white/5 transition-colors duration-300 focus-ring"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-neutral-200 hover:border-brand-navy text-brand-navy text-xs font-bold uppercase tracking-widest rounded-[2px] hover:bg-brand-navy/5 transition-colors duration-300 focus-ring"
               >
                 <span>Contact our Team</span>
               </Link>

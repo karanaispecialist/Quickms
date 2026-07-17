@@ -18,7 +18,7 @@ export default function PerformanceSection() {
   return (
     <section
       aria-label="Operational Performance"
-      className="relative w-full bg-brand-navy-dark text-white py-24 md:py-32 overflow-hidden border-t border-white/5"
+      className="relative w-full bg-white text-brand-navy py-24 md:py-32 overflow-hidden border-t border-neutral-200"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-12">
         
@@ -37,7 +37,7 @@ export default function PerformanceSection() {
             </span>
           </h2>
           {/* Supporting Copy */}
-          <p className="text-sm text-neutral-light/70 leading-relaxed max-w-xl">
+          <p className="text-sm text-neutral-dark/70 leading-relaxed max-w-xl">
             {performanceIntro.copy}
           </p>
         </div>
@@ -79,14 +79,14 @@ export default function PerformanceSection() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={revealVariants}
-              className="text-sm text-neutral-light/75 leading-relaxed max-w-md mt-2"
+              className="text-sm text-neutral-dark/75 leading-relaxed max-w-md mt-2"
             >
               {performanceIntro.copy}
             </motion.p>
           </div>
 
           {/* Right Column: Performance Index Rows List */}
-          <div className="col-span-12 lg:col-span-7 flex flex-col border-t border-white/10">
+          <div className="col-span-12 lg:col-span-7 flex flex-col border-t border-neutral-200">
             {performanceData.map((item) => (
               <PerformanceItem key={item.number} item={item} />
             ))}

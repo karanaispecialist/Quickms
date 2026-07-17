@@ -28,7 +28,7 @@ export default function ServiceProcess({ data }: ServiceProcessProps) {
   return (
     <section
       aria-label="Air Freight Process"
-      className="relative w-full bg-brand-navy-dark text-white py-24 md:py-32 overflow-hidden border-t border-white/5"
+      className="relative w-full bg-white text-brand-navy py-24 md:py-32 overflow-hidden border-t border-neutral-200"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
@@ -75,7 +75,7 @@ export default function ServiceProcess({ data }: ServiceProcessProps) {
                   {/* Step Indicator */}
                   <div className="relative flex flex-col items-center shrink-0">
                     {/* Dot */}
-                    <div className="w-12 md:w-16 h-12 md:h-16 rounded-full border border-white/[0.08] bg-white/[0.02] flex items-center justify-center group-hover:border-brand-orange/40 group-hover:bg-brand-orange/[0.05] transition-all duration-500 relative z-10">
+                    <div className="w-12 md:w-16 h-12 md:h-16 rounded-full border border-neutral-200 bg-brand-navy/5 flex items-center justify-center group-hover:border-brand-orange/40 group-hover:bg-brand-orange/[0.05] transition-all duration-500 relative z-10">
                       <span className="font-mono text-[10px] md:text-xs text-brand-orange font-bold tracking-widest">
                         {step.number}
                       </span>
@@ -90,12 +90,12 @@ export default function ServiceProcess({ data }: ServiceProcessProps) {
                     </span>
 
                     {/* Title */}
-                    <h3 className="text-xl md:text-2xl font-black tracking-tight leading-tight uppercase text-white select-none">
+                    <h3 className="text-xl md:text-2xl font-black tracking-tight leading-tight uppercase text-brand-navy select-none">
                       {step.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-sm text-neutral-light/55 leading-relaxed font-medium max-w-lg">
+                    <p className="text-sm text-neutral-dark/70 leading-relaxed font-medium max-w-lg">
                       {step.description}
                     </p>
                   </div>
@@ -103,7 +103,7 @@ export default function ServiceProcess({ data }: ServiceProcessProps) {
 
                 {/* Separator */}
                 {idx < data.length - 1 && (
-                  <div className="h-px bg-white/[0.04] ml-18 md:ml-[6.5rem]" />
+                  <div className="h-px bg-neutral-200 ml-18 md:ml-[6.5rem]" />
                 )}
               </motion.div>
             ))}

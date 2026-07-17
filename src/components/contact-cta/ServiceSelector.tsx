@@ -48,7 +48,7 @@ export default function ServiceSelector({
               className={`py-2.5 px-4 text-[10px] md:text-xs font-mono font-bold tracking-wider border rounded-[2px] transition-all duration-300 outline-none focus-ring
                 ${isSelected
                   ? "bg-brand-orange border-brand-orange text-white shadow-[0_4px_15px_rgba(255,90,9,0.25)]"
-                  : "bg-white/5 border-white/10 text-white/70 hover:border-white/30 hover:text-white"
+                  : "bg-brand-navy/5 border-neutral-200 text-brand-navy/70 hover:border-brand-navy hover:text-brand-navy"
                 }
               `}
             >

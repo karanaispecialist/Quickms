@@ -38,9 +38,9 @@ export default function PrimaryTransportationPage() {
       />
       <BreadcrumbJsonLd items={breadcrumbs} />
 
-      <div className="relative min-h-screen flex flex-col bg-brand-navy-dark text-white selection:bg-brand-orange selection:text-white">
+      <div className="relative min-h-screen flex flex-col bg-[#F8FAFC] text-neutral-dark selection:bg-brand-orange selection:text-white">
         {/* Global Navigation */}
-        <Navbar />
+        <Navbar light={true} />
 
         {/* Service Detail Content */}
         <main className="flex-grow">

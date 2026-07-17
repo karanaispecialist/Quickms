@@ -59,7 +59,7 @@ function CompanyHero() {
   return (
     <section
       aria-label="Company Introduction"
-      className="relative w-full min-h-[100svh] flex flex-col justify-end overflow-hidden bg-brand-navy-dark"
+      className="relative w-full min-h-[100svh] flex flex-col justify-end overflow-hidden bg-[#F8FAFC]"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -71,8 +71,8 @@ function CompanyHero() {
           className="object-cover object-center grayscale opacity-80"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-[#050816]/75 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#050816]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#F8FAFC] via-[#F8FAFC]/75 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#F8FAFC]/55 to-transparent" />
       </div>
 
       {/* Content */}
@@ -82,7 +82,7 @@ function CompanyHero() {
           initial="hidden"
           animate="visible"
           variants={revealVariants}
-          className="flex items-center gap-2 font-mono text-[10px] md:text-xs tracking-[0.25em] text-white/50 uppercase font-semibold"
+          className="flex items-center gap-2 font-mono text-[10px] md:text-xs tracking-[0.25em] text-neutral-dark/50 uppercase font-semibold"
         >
           <span className="text-brand-orange">[</span>
           <span>WHO WE ARE</span>
@@ -90,7 +90,7 @@ function CompanyHero() {
         </motion.div>
 
         {/* Headline */}
-        <h1 className="flex flex-col text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.95] text-white select-none">
+        <h1 className="flex flex-col text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.95] text-brand-navy select-none">
           <span className="relative block overflow-hidden py-1">
             <motion.span initial="hidden" animate="visible" variants={lineVariants} className="block">
               MOVING BUSINESS
@@ -108,7 +108,7 @@ function CompanyHero() {
           initial="hidden"
           animate="visible"
           variants={revealVariants}
-          className="text-sm md:text-base text-neutral-light/70 max-w-xl leading-relaxed mt-2"
+          className="text-sm md:text-base text-neutral-dark/80 max-w-xl leading-relaxed mt-2"
         >
           Quickmas Integrated Logistics delivers integrated logistics and supply chain solutions designed to connect businesses across borders with reliability, coordination, and long-term partnerships.
         </motion.p>
@@ -131,7 +131,7 @@ function CompanyHero() {
 
           <Link
             href="/services"
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-white/10 hover:border-white/30 text-white text-xs font-bold uppercase tracking-widest rounded-[2px] hover:bg-white/5 transition-colors duration-300 focus-ring w-full sm:w-auto"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-neutral-200 hover:border-brand-navy text-brand-navy text-xs font-bold uppercase tracking-widest rounded-[2px] hover:bg-brand-navy/5 transition-colors duration-300 focus-ring w-full sm:w-auto"
           >
             <span>Explore Services</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -139,7 +139,7 @@ function CompanyHero() {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-white/5 z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-neutral-200 z-10" />
     </section>
   );
 }
@@ -669,9 +669,9 @@ function CompanyCTA() {
 
 export default function CompanyClient() {
   return (
-    <div className="relative min-h-screen flex flex-col bg-brand-navy-dark text-white selection:bg-brand-orange selection:text-white">
+    <div className="relative min-h-screen flex flex-col bg-[#F8FAFC] text-neutral-dark selection:bg-brand-orange selection:text-white">
       {/* Global Navigation */}
-      <Navbar />
+      <Navbar light={true} />
 
       <main className="flex-grow">
         {/* 01 Hero */}
