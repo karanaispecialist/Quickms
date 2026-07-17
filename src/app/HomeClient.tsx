@@ -15,7 +15,7 @@ export default function HomeClient() {
   return (
     <div className="relative min-h-screen flex flex-col bg-brand-navy-dark text-white selection:bg-brand-orange selection:text-white">
       {/* Global Navigation Bar */}
-      <Navbar />
+      <Navbar light={true} />
 
       {/* Primary Landing Content */}
       <main className="flex-grow">

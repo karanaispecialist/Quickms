@@ -5,20 +5,23 @@ import { ArrowRight } from "lucide-react";
 
 interface QuoteButtonProps {
   scrolled: boolean;
+  lightHeader?: boolean;
 }
 
-export default function QuoteButton({ scrolled }: QuoteButtonProps) {
+export default function QuoteButton({ scrolled, lightHeader = false }: QuoteButtonProps) {
+  const isLightMode = scrolled || lightHeader;
+
   return (
     <Link
       href="/contact"
       className={`relative inline-flex items-center justify-center px-6 py-2.5 overflow-hidden font-medium tracking-wide uppercase text-xs transition-all duration-300 rounded-[2px] focus-ring group border border-brand-orange
-        ${scrolled ? "bg-transparent text-brand-orange hover:text-white" : "bg-brand-orange text-brand-navy-dark hover:text-white"}
+        ${isLightMode ? "bg-transparent text-brand-orange hover:text-white" : "bg-brand-orange text-brand-navy-dark hover:text-white"}
       `}
     >
       {/* Sliding background layer */}
       <span
         className={`absolute inset-0 w-full h-full transition-transform duration-300 ease-out origin-bottom scale-y-0 group-hover:scale-y-100
-          ${scrolled ? "bg-brand-orange" : "bg-brand-navy-dark"}
+          ${isLightMode ? "bg-brand-orange" : "bg-brand-navy-dark"}
         `}
       />
 

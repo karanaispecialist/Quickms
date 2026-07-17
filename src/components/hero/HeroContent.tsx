@@ -29,20 +29,20 @@ function GlobeVisualization() {
         initial={{ opacity: 0, scale: 0.85 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-        className="absolute w-[380px] h-[380px] md:w-[440px] md:h-[440px] rounded-full border border-white/[0.06]"
+        className="absolute w-[380px] h-[380px] md:w-[440px] md:h-[440px] rounded-full border border-brand-navy/[0.06]"
       />
       <motion.div
         initial={{ opacity: 0, scale: 0.85 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-        className="absolute w-[320px] h-[320px] md:w-[370px] md:h-[370px] rounded-full border border-white/[0.04]"
+        className="absolute w-[320px] h-[320px] md:w-[370px] md:h-[370px] rounded-full border border-brand-navy/[0.04]"
       />
 
       {/* Rotating orbit ring */}
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-        className="absolute w-[340px] h-[340px] md:w-[400px] md:h-[400px] rounded-full border border-dashed border-brand-orange/15"
+        className="absolute w-[340px] h-[340px] md:w-[400px] md:h-[400px] rounded-full border border-dashed border-brand-orange/20"
       >
         {/* Orbiting dot */}
         <motion.div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-brand-orange rounded-full shadow-[0_0_12px_rgba(255,90,9,0.6)]" />
@@ -55,9 +55,9 @@ function GlobeVisualization() {
         fill="none"
       >
         {/* Grid circles */}
-        <circle cx="210" cy="210" r="180" stroke="white" strokeOpacity="0.03" strokeWidth="0.75" />
-        <circle cx="210" cy="210" r="130" stroke="white" strokeOpacity="0.03" strokeWidth="0.75" />
-        <circle cx="210" cy="210" r="80" stroke="white" strokeOpacity="0.03" strokeWidth="0.75" />
+        <circle cx="210" cy="210" r="180" stroke="rgba(10,17,40,0.06)" strokeWidth="0.75" />
+        <circle cx="210" cy="210" r="130" stroke="rgba(10,17,40,0.06)" strokeWidth="0.75" />
+        <circle cx="210" cy="210" r="80" stroke="rgba(10,17,40,0.06)" strokeWidth="0.75" />
 
         {/* Animated route arcs */}
         {routes.map((route, i) => (
@@ -102,7 +102,7 @@ function GlobeVisualization() {
             <motion.text
               x={hub.cx + 8}
               y={hub.cy - 8}
-              fill="rgba(255,255,255,0.35)"
+              fill="rgba(10,17,40,0.5)"
               fontSize="7"
               fontFamily="monospace"
               letterSpacing="0.1em"
@@ -130,9 +130,9 @@ function GlobeVisualization() {
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute w-16 h-16 md:w-20 md:h-20 rounded-full bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center backdrop-blur-sm"
+        className="absolute w-16 h-16 md:w-20 md:h-20 rounded-full bg-brand-orange/15 border border-brand-orange/30 flex items-center justify-center backdrop-blur-sm"
       >
-        <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-orange/20 flex items-center justify-center">
+        <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-brand-orange/30 flex items-center justify-center">
           <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-brand-orange shadow-[0_0_20px_rgba(255,90,9,0.5)]" />
         </div>
       </motion.div>
@@ -151,14 +151,15 @@ function GlobeVisualization() {
           initial={{ opacity: 0, scale: 0.7, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.6, delay: badge.delay, ease: [0.16, 1, 0.3, 1] }}
-          className={`absolute ${badge.x} ${badge.y} flex items-center gap-1.5 px-3 py-1.5 bg-white/[0.04] backdrop-blur-md border border-white/[0.08] rounded-full`}
+          className={`absolute ${badge.x} ${badge.y} flex items-center gap-1.5 px-3 py-1.5 bg-white/95 backdrop-blur-sm border border-neutral-200 shadow-md rounded-full`}
         >
           <badge.icon className="w-3 h-3 text-brand-orange" />
-          <span className="text-[9px] font-mono font-bold tracking-widest text-white/60">{badge.label}</span>
+          <span className="text-[9px] font-mono font-bold tracking-widest text-brand-navy-light/80">{badge.label}</span>
         </motion.div>
       ))}
     </div>
   );
+
 }
 
 /* ---------- main hero content ---------- */
@@ -203,7 +204,7 @@ export default function HeroContent() {
         {/* 1. Eyebrow */}
         <motion.div
           variants={fadeUpVariants}
-          className="flex items-center gap-2 font-mono text-[10px] md:text-xs tracking-[0.25em] text-white/50 uppercase font-semibold mb-6"
+          className="flex items-center gap-2 font-mono text-[10px] md:text-xs tracking-[0.25em] text-brand-navy/60 uppercase font-semibold mb-6"
         >
           <span className="text-brand-orange">[</span>
           <span>Global Freight & Supply Chain Solutions</span>
@@ -211,7 +212,7 @@ export default function HeroContent() {
         </motion.div>
 
         {/* 2. Headline with line-masked animation */}
-        <h1 className="flex flex-col text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-black tracking-tight leading-[0.95] md:leading-[0.9] text-white select-none">
+        <h1 className="flex flex-col text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-black tracking-tight leading-[0.95] md:leading-[0.9] text-brand-navy select-none">
           <span className="relative block overflow-hidden py-1">
             <motion.span variants={lineVariants} className="block">
               MOVING BUSINESS
@@ -230,7 +231,7 @@ export default function HeroContent() {
         {/* 3. Supporting Description */}
         <motion.p
           variants={fadeUpVariants}
-          className="text-sm md:text-base text-neutral-light/75 max-w-xl leading-relaxed mt-8 font-normal"
+          className="text-sm md:text-base text-neutral-dark/85 max-w-xl leading-relaxed mt-8 font-normal"
         >
           Integrated freight forwarding and supply chain solutions connecting businesses across
           air, ocean, road, customs, warehousing, and final delivery.
@@ -244,9 +245,9 @@ export default function HeroContent() {
           {/* Primary Quote CTA */}
           <Link
             href="/contact"
-            className="relative inline-flex items-center justify-center px-8 py-3.5 overflow-hidden font-bold tracking-wider uppercase text-xs transition-all duration-300 rounded-[2px] focus-ring group bg-brand-orange text-brand-navy-dark hover:text-white border border-brand-orange w-full sm:w-auto"
+            className="relative inline-flex items-center justify-center px-8 py-3.5 overflow-hidden font-bold tracking-wider uppercase text-xs transition-all duration-300 rounded-[2px] focus-ring group bg-brand-orange text-white hover:text-brand-orange border border-brand-orange w-full sm:w-auto"
           >
-            <span className="absolute inset-0 w-full h-full bg-brand-navy-dark transition-transform duration-300 ease-out origin-bottom scale-y-0 group-hover:scale-y-100" />
+            <span className="absolute inset-0 w-full h-full bg-white transition-transform duration-300 ease-out origin-bottom scale-y-0 group-hover:scale-y-100" />
             <span className="relative flex items-center gap-2">
               <span>Get a Quote</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -256,11 +257,11 @@ export default function HeroContent() {
           {/* Secondary Services CTA */}
           <Link
             href="#services"
-            className="inline-flex items-center gap-2 px-6 py-3.5 font-bold tracking-wider uppercase text-xs transition-colors duration-300 text-white hover:text-brand-orange focus-ring rounded group relative w-full sm:w-auto justify-center sm:justify-start"
+            className="inline-flex items-center gap-2 px-6 py-3.5 font-bold tracking-wider uppercase text-xs transition-colors duration-300 text-brand-navy hover:text-brand-orange focus-ring rounded group relative w-full sm:w-auto justify-center sm:justify-start"
           >
             <span>Explore Services</span>
             <ArrowDownRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
-            <span className="absolute bottom-1 left-6 right-6 h-[1px] bg-white/20 group-hover:bg-brand-orange transition-colors duration-300" />
+            <span className="absolute bottom-1 left-6 right-6 h-[1px] bg-brand-navy/15 group-hover:bg-brand-orange transition-colors duration-300" />
           </Link>
         </motion.div>
       </div>

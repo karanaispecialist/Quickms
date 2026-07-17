@@ -2,12 +2,13 @@
 
 interface LogoProps {
   scrolled: boolean;
+  lightHeader?: boolean;
   className?: string;
 }
 
-export default function Logo({ scrolled, className = "" }: LogoProps) {
+export default function Logo({ scrolled, lightHeader = false, className = "" }: LogoProps) {
   // Brand color variables
-  const navyColor = scrolled ? "#0A1128" : "#FFFFFF";
+  const navyColor = (scrolled || lightHeader) ? "#0A1128" : "#FFFFFF";
   const orangeColor = "#FF5A09";
 
   return (

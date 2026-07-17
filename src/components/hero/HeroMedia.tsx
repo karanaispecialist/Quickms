@@ -14,7 +14,7 @@ export default function HeroMedia() {
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 w-full h-full overflow-hidden bg-brand-navy-dark"
+      className="absolute inset-0 w-full h-full overflow-hidden bg-white"
     >
       {/* Background Media Image - Premium aerial cargo port view */}
       <motion.div
@@ -32,17 +32,17 @@ export default function HeroMedia() {
         />
       </motion.div>
 
-      {/* Refined gradient overlays — keep left dark for text, let right breathe more */}
-      <div className="absolute inset-0 bg-gradient-to-r from-brand-navy-dark via-brand-navy-dark/90 to-brand-navy-dark/60" />
-      <div className="absolute inset-0 bg-gradient-to-t from-brand-navy-dark via-brand-navy-dark/70 to-brand-navy-dark/40" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,rgba(5,8,22,0.2)_0%,rgba(5,8,22,0.85)_70%)]" />
+      {/* Refined light gradient overlays — keep left slightly shaded/tinted for text readability, but very bright overall */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-white/35" />
+      <div className="absolute inset-0 bg-gradient-to-t from-white via-white/45 to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,rgba(255,255,255,0.05)_0%,rgba(255,255,255,0.45)_80%)]" />
 
       {/* Orange ambient glow — subtle atmosphere */}
-      <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-brand-orange/[0.03] blur-[150px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-0 left-1/3 w-[400px] h-[300px] bg-brand-orange/[0.02] blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-brand-orange/[0.04] blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 left-1/3 w-[400px] h-[300px] bg-brand-orange/[0.03] blur-[120px] rounded-full pointer-events-none" />
 
       {/* Dynamic Route SVG grid overlay */}
-      <div className="absolute inset-0 opacity-[0.04] pointer-events-none mix-blend-screen">
+      <div className="absolute inset-0 opacity-[0.05] pointer-events-none text-neutral-dark/30">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="hero-grid-lines" width="60" height="60" patternUnits="userSpaceOnUse">

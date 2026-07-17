@@ -13,7 +13,7 @@ export default function ScrollIndicator() {
       <span className="text-[8px] font-mono tracking-[0.25em] text-neutral-muted/80 uppercase [writing-mode:vertical-lr] select-none">
         Scroll to Explore
       </span>
-      <div className="w-[1px] h-12 bg-white/10 relative overflow-hidden">
+      <div className="w-[1px] h-12 bg-brand-navy/15 relative overflow-hidden">
         {/* Animated indicator line dot sliding down */}
         <motion.div
           animate={{

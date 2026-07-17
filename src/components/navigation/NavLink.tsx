@@ -8,22 +8,23 @@ import { NavLinkItem } from "./navigation.data";
 interface NavLinkProps {
   item: NavLinkItem;
   scrolled: boolean;
+  lightHeader?: boolean;
   onClick?: () => void;
 }
 
-export default function NavLink({ item, scrolled, onClick }: NavLinkProps) {
+export default function NavLink({ item, scrolled, lightHeader = false, onClick }: NavLinkProps) {
   const pathname = usePathname();
   const isActive =
     item.href === "/"
       ? pathname === "/"
       : pathname.startsWith(item.href);
 
-  // Styling based on navbar state (transparent over dark hero vs scrolled floating light bg)
+  const isLightMode = scrolled || lightHeader;
+
+  // Styling based on navbar state (transparent over dark/light hero vs scrolled floating light bg)
   const textColor = isActive
-    ? scrolled
-      ? "text-brand-orange font-medium"
-      : "text-brand-orange font-medium"
-    : scrolled
+    ? "text-brand-orange font-medium"
+    : isLightMode
     ? "text-neutral-dark hover:text-brand-orange"
     : "text-white/80 hover:text-white";
 

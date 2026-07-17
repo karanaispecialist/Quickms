@@ -12,7 +12,7 @@ import MobileMenu from "./MobileMenu";
 import QuoteButton from "./QuoteButton";
 import Logo from "./Logo";
 
-export default function Navbar() {
+export default function Navbar({ light = false }: { light?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
@@ -69,6 +69,8 @@ export default function Navbar() {
         className={`fixed left-1/2 -translate-x-1/2 z-50 flex items-center justify-between transition-all duration-500 ease-out
           ${scrolled 
             ? "w-[92%] max-w-6xl top-4 px-6 md:px-8 py-3 bg-white/95 backdrop-blur-md border border-neutral-200 shadow-[0_10px_35px_rgba(0,0,0,0.05)] rounded-[3px] text-neutral-dark" 
+            : light
+            ? "w-full top-0 px-6 md:px-12 py-6 bg-transparent border-b border-neutral-200/50 text-neutral-dark"
             : "w-full top-0 px-6 md:px-12 py-6 bg-transparent border-b border-white/5 text-white"
           }
         `}
@@ -79,7 +81,7 @@ export default function Navbar() {
           className="flex items-center focus-ring rounded group w-44 sm:w-48 md:w-52"
           aria-label="Quickmas Integrated Logistics Homepage"
         >
-          <Logo scrolled={scrolled} className="w-full" />
+          <Logo scrolled={scrolled} lightHeader={light} className="w-full" />
         </Link>
 
         {/* DESKTOP NAVIGATION (Center) */}
@@ -99,7 +101,7 @@ export default function Navbar() {
                     className={`flex items-center gap-1 cursor-pointer transition-colors duration-300 focus-ring rounded font-medium
                       ${isServicesActive
                         ? "text-brand-orange"
-                        : scrolled
+                        : (scrolled || light)
                         ? "text-neutral-dark hover:text-brand-orange"
                         : "text-white/85 hover:text-white"
                       }
@@ -123,6 +125,7 @@ export default function Navbar() {
                 key={link.label}
                 item={link}
                 scrolled={scrolled}
+                lightHeader={light}
               />
             );
           })}
@@ -132,14 +135,14 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           {/* CTA - Hidden on mobile */}
           <div className="hidden sm:block">
-            <QuoteButton scrolled={scrolled} />
+            <QuoteButton scrolled={scrolled} lightHeader={light} />
           </div>
 
           {/* Mobile Menu Trigger */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className={`lg:hidden flex flex-col justify-center items-end w-8 h-8 focus-ring rounded transition-colors duration-300
-              ${scrolled ? "text-neutral-dark hover:text-brand-orange" : "text-white hover:text-brand-orange"}
+              ${(scrolled || light) ? "text-neutral-dark hover:text-brand-orange" : "text-white hover:text-brand-orange"}
             `}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}

@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section
       aria-label="Home Page Introduction"
-      className="relative min-h-[100svh] w-full flex flex-col justify-between overflow-hidden bg-brand-navy-dark"
+      className="relative min-h-[100svh] w-full flex flex-col justify-between overflow-hidden bg-white"
     >
       {/* 1. Background Cinematic Visual System */}
       <HeroMedia />

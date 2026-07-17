@@ -47,7 +47,7 @@ export default function HeroStats() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="relative z-10 w-full mt-auto border-t border-white/10"
+      className="relative z-10 w-full mt-auto border-t border-neutral-200/60"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-6 md:py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
         {/* Left Stats Section */}
@@ -62,10 +62,10 @@ export default function HeroStats() {
                 [ {stat.label} ]
               </span>
               <div className="flex items-baseline gap-1.5">
-                <span className="text-xl md:text-2xl font-black text-white font-mono tracking-tight">
+                <span className="text-xl md:text-2xl font-black text-brand-navy font-mono tracking-tight">
                   {stat.value}
                 </span>
-                <span className="text-[10px] font-bold tracking-wider text-neutral-light/60">
+                <span className="text-[10px] font-bold tracking-wider text-neutral-dark/60">
                   {stat.unit}
                 </span>
               </div>
@@ -76,7 +76,7 @@ export default function HeroStats() {
         {/* Right side live status or coordinate - Technical touch */}
         <motion.div
           variants={itemVariants}
-          className="hidden md:flex flex-col items-end gap-1 font-mono text-[9px] tracking-widest text-neutral-muted/60 text-right"
+          className="hidden md:flex flex-col items-end gap-1 font-mono text-[9px] tracking-widest text-neutral-muted/80 text-right"
         >
           <span>NETWORK LOGISTICS VERIFIER // V4.0</span>
           <span>ESTABLISHED GLOBAL GATEWAY // ACTIVE</span>
