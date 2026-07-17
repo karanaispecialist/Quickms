@@ -17,8 +17,6 @@ export const navLinks: NavLinkItem[] = [
   { label: "Services", href: "/services", hasMegaMenu: true },
   { label: "Industries", href: "/industries" },
   { label: "Network", href: "/network" },
-  { label: "Projects", href: "/projects" },
-  { label: "Insights", href: "/insights" },
 ];
 
 export const serviceItems: ServiceItem[] = [
