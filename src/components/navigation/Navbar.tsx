@@ -10,6 +10,7 @@ import NavLink from "./NavLink";
 import ServicesMegaMenu from "./ServicesMegaMenu";
 import MobileMenu from "./MobileMenu";
 import QuoteButton from "./QuoteButton";
+import Logo from "./Logo";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -75,62 +76,10 @@ export default function Navbar() {
         {/* LOGO */}
         <Link
           href="/"
-          className="flex items-center gap-2.5 focus-ring rounded group"
+          className="flex items-center focus-ring rounded group w-44 sm:w-48 md:w-52"
           aria-label="Quickmas Integrated Logistics Homepage"
         >
-          {/* Custom high-end SVG geometric logistics logo */}
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="transition-transform duration-300 group-hover:scale-105"
-          >
-            {/* Base grid or geometric paths */}
-            <path
-              d="M16 2L2 9.5V22.5L16 30L30 22.5V9.5L16 2Z"
-              stroke={scrolled ? "#0A1128" : "#FFFFFF"}
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-              className="opacity-20"
-            />
-            {/* Interlocking fast geometric paths */}
-            <path
-              d="M16 2L2 9.5L16 17L30 9.5L16 2Z"
-              fill={scrolled ? "#0A1128" : "#FFFFFF"}
-              className="transition-colors duration-500"
-            />
-            <path
-              d="M2 9.5V22.5L16 17V2L2 9.5Z"
-              fill="#FF5A09"
-              fillOpacity="0.9"
-            />
-            <path
-              d="M16 17L30 9.5V22.5L16 30V17Z"
-              fill={scrolled ? "#0A1128" : "#FFFFFF"}
-              className="transition-colors duration-500"
-              fillOpacity="0.75"
-            />
-          </svg>
-
-          {/* Typography wordmark */}
-          <div className="flex flex-col">
-            <span
-              className={`font-black tracking-[0.15em] text-base leading-none transition-colors duration-500
-                ${scrolled ? "text-brand-navy" : "text-white"}
-              `}
-            >
-              QUICKMAS
-            </span>
-            <span
-              className={`text-[8px] font-bold tracking-[0.25em] leading-none mt-1 transition-colors duration-500
-                ${scrolled ? "text-neutral-muted" : "text-white/60"}
-              `}
-            >
-              INTEGRATED LOGISTICS
-            </span>
-          </div>
+          <Logo scrolled={scrolled} className="w-full" />
         </Link>
 
         {/* DESKTOP NAVIGATION (Center) */}
